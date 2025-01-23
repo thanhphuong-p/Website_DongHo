@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+    header {
+        background-color:rgb(50, 48, 48);
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .search input {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .user a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+}
+nav {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #70604e;
+    margin: 8px 0;
+}
+nav a {
+    line-height: 40px;
+    padding: 10px 10px;
+    color: white;
+}
+nav a:hover {
+    background-color: rgb(116, 130, 116);
+    color: rgb(25, 19, 19);
+    border-radius: 4px;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    background-color: #796752;
+    color: white;
+    
+}
+
+input {
+    width: 50px;
+}
+
+button {
+    text-align: center;
+    color: red;
+    height: 30px;
+    width: 50px;
+}
+
+.nu1{
+
+    float: right;
+
+}
+.nu2{
+    display: block;
+    padding: 20px ;
+    height: 200px;
+    width: 300px;
+}
+aside a img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    float: left;
+    
+}
+aside a img:hover {
+    box-shadow: 0px 0px 1px black;
+    width: 100px;
+    height: 100px;
+}
+
+iframe{
+    width: 550px;
+    height: 550px;
+    margin-right: 10px;
+    float: left;
+}
+.khung{
+    width: 1000px;
+    height: 650px;
+}
+.mieuta{
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(64, 61, 61);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 20px;
+    z-index: 999;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.popup p {
+    margin: 0;
+}
+
+.popup .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.popup .close:hover,
+.popup .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+

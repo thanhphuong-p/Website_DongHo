@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    #video1{
+        width: 355px;
+    height: 289px;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+    #video2{
+        width: 100%;
+        height: 270px;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+</style>
+<body>
+    <header>
+       
+        <div class="logo">
+            <a href="index.html"><img src="img/logoshop.png" alt="logo"></a>
+        </div>
+        <div class="search">
+            <input type="search" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()" class="tim">Tìm kiếm</button>
+        </div>
+        <div class="giohang">
+            <span>Giỏ hàng <i class="fa-solid fa-bag-shopping"></i></span>
+        </div>
+        <div class="user">
+            <a href="login.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+        </div>
+    </header>
+    <div class="container">       
+        <nav>
+            <a href="#"><i class="fa-solid fa-house"></i></a>
+            <a href="brand.html">THƯƠNG HIỆU</a>
+            <a href="nam.html">ĐỒNG HỒ NAM</a>
+            <a href="nu.html">ĐỒNG HỒ NỮ</a>
+            <a href="otherproducts.html">SẢN PHẨM GIẢM GIÁ</a>
+        </nav>
+        <div class="row">
+            <div class="text">
+                <div class="text1">
+                    <h1>BỘ SƯU TẬP MỚI</h1>
+                </div>
+                <img id="imgslider" src="img/05022023_MFonline_watchTet20249.jpeg" alt="">
+                 <!-- Thêm nút điều khiển -->
+            <div class="controls">
+                <button onclick="prev()">◀</button>
+                <button onclick="next()">▶</button>
+            </div>
+            </div>
+            <div class="hinh1">  
+                <div class="hinh12">
+                    <h1>ĐỒNG HỒ NAM</h1>
+                </div>
+                
+                <a href="chitiet.html">
+                    <video id="video1" autoplay muted loop>
+                        <source src="img/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
+            </div>
+            <div class="hinh2">
+                <div class="hinh21">
+                    <h1>ĐỒ HỒ NỮ</h1>
+                </div>
+              
+                <a href="nu.html">
+                    <video id="video1" autoplay muted loop>
+                        <source src="img/donghodoi.mp4" type="video/mp4">
+                        
+                    </video>
+                </a>
+            </div>
+            
+            <div class="hinh3">
+                <div class="hinh31">
+                    <h1>THIẾT KẾ RIÊNG</h1>
+                </div>
+                <video id="video2" autoplay muted loop>
+                    <source src="img/thietketdoi.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+        </div>
+       <!-- phần giỏ hàng  -->
+<div id="cart">
+    <table>
+      <tr class="rowd">
+        <td style="color: white;"><h3>STT</h3></td>
+        <td style="color: white;"><h3>Hình sp</h3></td>
+        <td style="color: white;"><h3>Tên SP</h3></td>
+        <td style="color: white;"><h3>Giá SP</h3></td>
+        <td style="color: white;"><h3>Số lượng</h3></td>
+        <td style="color: white;"><h3>Thành tiền</h3></td>
+        <td style="color: white;"><h3>Xóa</h3></td>
+      </tr>
+      <tbody id="tb"></tbody>
+      <tr id="row">
+        <td colspan="7" style="color: red;">Giỏ hàng rỗng</td>
+      </tr>
+    </table>
+    <tr>
+      <td colspan="5"><h2>Tổng Tiền</h2></td>
+      <td colspan="2"><h2 id="total">0</h2></td>
+    </tr>
+    <!-- Thêm nút Thanh toán -->
+    <button style="background-color: rgb(52, 52, 220); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; position: absolute; right: 10px; bottom: 10px;" onclick="checkout()">Thanh toán</button>
+<!-- Popup chọn phương thức thanh toán -->
+<div id="payment-method" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+    <h3>Chọn phương thức thanh toán</h3>
+    <label>
+        <input type="radio" name="payment" value="online" checked> Thanh toán online (Ví điện tử/Thẻ ngân hàng)
+    </label><br>
+    <label>
+        <input type="radio" name="payment" value="cod"> Thanh toán khi nhận hàng (COD)
+    </label><br><br>
+    <button onclick="confirmPayment()">Xác nhận</button>
+    <button onclick="closePayment()">Hủy</button>
+</div>
+
+
+<!-- Overlay để làm mờ nền khi hiển thị popup -->
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;"></div>
+
+</div>
+
+<!-- ===================== -->
+
+        <div class="row">
+            <div class="name">
+                <h1>ĐỒNG HỒ BÁN CHẠY</h1>
+                <div class="list_sp" id="list_sp"></div>
+            </div>
+        </div>
+        
+        
+    <footer>
+        <div style="padding-left: 50px;">
+            <audio id="myAudio" src="img/Y2meta.app - LEGENDS NEVER DIE _ LYRICS _ FT. AGAINST THE CURRENT (128 kbps).mp3" controls loop></audio>
+            <div class="map-link">
+                <a href="https://www.google.com/maps/place/242+Nguy%E1%BB%85n+Tri+Ph%C6%B0%C6%A1ng,+B%C3%ACnh+D%C6%B0%C6%A1ng/@10.8881844,106.7669229,17z/data=!3m1!4b1!4m6!3m5!1s0x3175e2db048d3a67:0x9c99b2b8d4d1c0!8m2!3d10.8881844!4d106.7691116!16s%2Fg%2F11b6w0tv_1" target="_blank">Vị trí</a>
+            </div>
+            
+            Địa chỉ : 242/nguyễn tri phương/Bình Dương 
+            <p style="margin: 20px 0 5px 0;">Phạm Thanh Phương Thực hiện</p>
+            Điện thoại :0369900275 <br>
+            Email: pp163663@gmail.com  <br>
+            sản phẩm tạo ra không có mục đích khinh doanh. đây chỉ là bài assignment  
+            
+        </div>       
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/giohang.js"></script>
+    <script src="js/chitietgh.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.controls {
+    margin-top: 10px; /* Khoảng cách giữa phần text và các nút điều khiển */
+    text-align: center; /* Căn giữa các nút điều khiển */
+}
+
+.controls button {
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Bỏ viền */
+    padding: 10px 20px; /* Đệm bên trong nút */
+    cursor: pointer; /* Con trỏ thành dấu nháy khi rê chuột */
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+}
+
+.controls button:hover {
+    background-color: #45a049; /* Màu nền khi rê chuột vào */
+}
+
+.controls button:focus {
+    outline: none; /* Bỏ viền khi focus */
+}
