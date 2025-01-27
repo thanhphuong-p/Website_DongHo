@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logoshop.png" alt="logo"></a>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Tìm kiếm...">
+        </div>
+        <div class="giohang">
+            <span>Giỏ hàng <i class="fa-solid fa-bag-shopping"></i></span>
+        </div>
+        <div class="user">
+            <a href="login.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <a href="brand.html">THƯƠNG HIỆU</a>
+            <a href="chitiet.html">ĐỒNG HỒ NAM</a>
+            <a href="nu.html">ĐỒNG HỒ NỮ</a>
+            <a href="otherproducts.html">SẢN PHẨM GIẢM GIÁ</a>
+        </nav>
+        <hr>
+        <div class="col31">
+            <div class="form-group">
+                <input type="list" list="giá" class="form-control" placeholder="Khoảng giá">
+                <datalist id="giá">
+                    <option value="dưới 5 triệu">
+                    <option value="trên 5 triệu">
+                    <option value="từ 10 triệu - 20 triệu">
+                    <option value="20 triệu trở lên">
+                </datalist>
+            </div>
+            <div class="form-group">
+                <input type="list" list="thuonghieu" class="form-control" placeholder="Thương hiệu">
+                <datalist id="thuonghieu">
+                    <option value="TISSOT">
+                    <option value="LONGNES">
+                    <option value="OMEGA">
+                    <option value="NOVADO">
+                </datalist>
+            </div>
+            <div class="form-group">
+                <input type="list" list="chatlieu" class="form-control" placeholder="Chất liệu">
+                <datalist id="chatlieu">
+                    <option value="dây cao su">
+                    <option value="vàng 18k">
+                    <option value="titanium">
+                    <option value="thép không gỉ">
+                </datalist>
+            </div>
+        </div>
+        <div class="col51">
+            <h1>ĐỒNG HỒ NAM</h1>
+            <span>Đồng hồ nam không chỉ đơn thuần là một phụ kiện, mà còn là biểu tượng của sự lịch lãm và đẳng cấp. <br>
+                 Với thiết kế tinh xảo và công nghệ tiên tiến, mỗi chiếc đồng hồ mang trong mình một câu chuyện riêng, <br>
+                 thể hiện phong cách và cá tính của người đeo. Từ những chiếc đồng hồ cơ truyền thống với sự <br>
+                 tỉ mỉ trong từng chi tiết, đến những mẫu đồng hồ thông minh hiện đại, tất cả đều được chế tác với sự <br>
+                  tận tâm và niềm đam mê.á Hãy để chiếc đồng hồ của bạn không chỉ là công cụ đo thời gian, mà còn là <br>
+                   người bạn đồng hành đng tin cậy, ghi dấu những khoảnh khắc đáng nhớ trong cuộc sống. 
+            </span>
+            <hr>
+            <!-- phần giỏ hàng  -->
+        <div id="cart">
+            <table>
+              <tr class="rowd">
+                <td style="color: white;"><h3>STT</h3></td>
+                <td style="color: white;"><h3>Hình sp</h3></td>
+                <td style="color: white;"><h3>Tên SP</h3></td>
+                <td style="color: white;"><h3>Giá SP</h3></td>
+                <td style="color: white;"><h3>Số lượng</h3></td>
+                <td style="color: white;"><h3>Thành tiền</h3></td>
+                <td style="color: white;"><h3>Xóa</h3></td>
+              </tr>
+              <tbody id="tb"></tbody>
+              <tr id="row">
+                <td colspan="7" style="color: red;">Giỏng hàng rỗng</td>
+              </tr>
+            </table>
+            <tr>
+              <td colspan="5"><h2>Tổng Tiền</h2></td>
+              <td colspan="2"><h2 id="total">0</h2></td>
+              </tr>
+          </div>
+          <!-- ===================== -->
+            <div>
+                <h2 class="nam1">ĐỒNG HỒ NAM ĐANG HOT</h2>
+                <div class="list_sp" id="list_sp"></div>
+            </div>
+            
+            <hr>
+    </div>
+    <script src="js/nam.js"></script>
+    
+   <footer>
+    <div style="padding-left: 50px;">
+        <p style="margin: 30px 1px;">Phạm Thanh Phương Thực hiện</p><br>    
+        Địa chỉ : 242/nguyễn tri phương/Bình Dương <br>
+        Điện thoại :0369900275 <br>
+        Email: pp163663@gmail.com   
+    </div>  
+   </footer>
+</body>
+</html>

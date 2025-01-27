@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="css/giohang.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logoshop.png" alt="logo"></a>
+        </div>
+        <div class="search">
+            <input type="search" placeholder="Tìm kiếm...">
+        </div>
+        <div class="user">
+            <a href="login.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Giỏ hàng của bạn</h1>
+       <table border="1">
+            <tr class="so1">
+                <td>sản phẩm</td>
+                <td>số lượng</td>
+                <td>đơn giá</td>
+                <td>thành tiền</td>
+            </tr>
+            <tr class="so2">
+                <td>
+                    <div class="image">
+                    <img src="img/8.jpg.webp" alt="Product Image">
+                    Citizen-Nữ GA1058-16E Size 30mm
+                    </div>
+                </td>
+                <td>
+                    <div class="soluong">
+                    <input class="sl" type="number" value="1" maxlength="1000" size="2" min="1" max="999">
+                    </div>
+                </td>
+                <td>16.500.000 đ</td>
+                <td class="gia">16.500.000 đ</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="image">
+                        <img src="img/donghonam1.png" alt="Product Image">
+                        Đồng Hồ Nam Lobinni No.15011-3 Automatic
+                    </div>
+                </td>
+                <td>
+                    <div class="soluong">
+                        <input class="sl" type="number" value="1" maxlength="1000" size="2" min="1" max="999">
+                        </div>
+                </td>
+                <td>12.000.000 đ</td>
+                <td>12.000.000 đ</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="tong">
+                    Tổng tiền: 
+                    <span>28.500.000 đ</span>
+                </td>
+            </tr>
+       </table>
+        <div class="full1">
+            <button class="thanhtoan">Thanh toán</button>
+        </div>
+    </div>
+
+    <footer>
+        <div style="padding-left: 50px;">
+            <p style="margin: 20px 0 5px 0;">Phạm Thanh Phương Thực hiện</p><br>    
+            Địa chỉ : 242/nguyễn tri phương/Bình Dương <br>
+            Điện thoại :0369900275 <br>
+            Email: pp163663@gmail.com   
+        </div>    
+    </footer>
+</body>
+</html>
